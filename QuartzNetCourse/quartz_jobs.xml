@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This file contains job definitions in schema version 2.0 format -->
+
+<job-scheduling-data xmlns="http://quartznet.sourceforge.net/JobSchedulingData" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0">
+
+  <processing-directives>
+    <overwrite-existing-data>true</overwrite-existing-data>
+  </processing-directives>
+
+  <schedule>
+
+    <!--CourseJob测试 任务配置-->
+    <job>
+      <name>CourseJob</name>
+      <group>course</group>
+      <description>courseJob测试</description>
+      <job-type>QuartzNetCourse.QuartzJobs.CourseJob,QuartzNetCourse</job-type>
+      <durable>true</durable>
+      <recover>false</recover>
+    </job>
+    <trigger>
+      <cron>
+        <name>CourseJobTrigger</name>
+        <group>course</group>
+        <job-name>CourseJob</job-name>
+        <job-group>course</job-group>
+        <start-time>2016-06-28T00:00:00+08:00</start-time>
+        <cron-expression>0/10 * * * * ?</cron-expression>
+      </cron>
+    </trigger>
+    <!--AskPaperJob测试 任务配置-->
+    <job>
+      <name>AskPaperJob</name>
+      <group>AskPaper</group>
+      <description>AskPaperJob测试</description>
+      <job-type>QuartzNetCourse.QuartzJobs.AskPaperJob,QuartzNetCourse</job-type>
+      <durable>true</durable>
+      <recover>false</recover>
+    </job>
+    <trigger>
+      <cron>
+        <name>AskPaperJobTrigger</name>
+        <group>AskPaper</group>
+        <job-name>AskPaperJob</job-name>
+        <job-group>AskPaper</job-group>
+        <start-time>2016-06-28T00:00:00+08:00</start-time>
+        <cron-expression>0 0/15 05-22 * * ?</cron-expression>
+      </cron>
+    </trigger>
+
+    <!--WorkJob测试 任务配置-->
+    <job>
+      <name>WorkJob</name>
+      <group>Work</group>
+      <description>WorkJob测试</description>
+      <job-type>QuartzNetCourse.QuartzJobs.WorkJob,QuartzNetCourse</job-type>
+      <durable>true</durable>
+      <recover>false</recover>
+    </job>
+    <trigger>
+      <cron>
+        <name>WorkJobTrigger</name>
+        <group>Work</group>
+        <job-name>WorkJob</job-name>
+        <job-group>Work</job-group>
+        <start-time>2016-06-28T00:00:00+08:00</start-time>
+        <cron-expression>0 0/15 05-22 * * ?</cron-expression>
+      </cron>
+    </trigger>
+    <!--ExamPaperJob测试 任务配置-->
+    <job>
+      <name>ExamPaperJob</name>
+      <group>ExamPaper</group>
+      <description>ExamPaperJob测试</description>
+      <job-type>QuartzNetCourse.QuartzJobs.ExamPaperJob,QuartzNetCourse</job-type>
+      <durable>true</durable>
+      <recover>false</recover>
+    </job>
+    <trigger>
+      <cron>
+        <name>ExamPaperTrigger</name>
+        <group>ExamPaper</group>
+        <job-name>ExamPaperJob</job-name>
+        <job-group>ExamPaper</job-group>
+        <start-time>2016-06-28T00:00:00+08:00</start-time>
+        <cron-expression>0 0/15 05-22 * * ?</cron-expression>
+      </cron>
+    </trigger>
+    <!--ResourceExamineJob测试 任务配置-->
+    <job>
+      <name>ResourceExamineJob</name>
+      <group>ResourceExamine</group>
+      <description>ResourceExamineJob测试</description>
+      <job-type>QuartzNetCourse.QuartzJobs.ResourceExamineJob,QuartzNetCourse</job-type>
+      <durable>true</durable>
+      <recover>false</recover>
+    </job>
+    <trigger>
+      <cron>
+        <name>ResourceExamineTrigger</name>
+        <group>ResourceExamine</group>
+        <job-name>ResourceExamineJob</job-name>
+        <job-group>ResourceExamine</job-group>
+        <start-time>2016-06-28T00:00:00+08:00</start-time>
+        <cron-expression>0 0/15 05-22 * * ?</cron-expression>
+      </cron>
+    </trigger>
+    <!--StudentSignUpJob测试 任务配置-->
+    <job>
+      <name>StudentSignUpJob</name>
+      <group>StudentSignUp</group>
+      <description>StudentSignUpJob测试</description>
+      <job-type>QuartzNetCourse.QuartzJobs.StudentSignUpJob,QuartzNetCourse</job-type>
+      <durable>true</durable>
+      <recover>false</recover>
+    </job>
+    <trigger>
+      <cron>
+        <name>StudentSignUpTrigger</name>
+        <group>StudentSignUp</group>
+        <job-name>StudentSignUpJob</job-name>
+        <job-group>StudentSignUp</job-group>
+        <start-time>2016-06-28T00:00:00+08:00</start-time>
+        <cron-expression>0 0/15 05-22 * * ?</cron-expression>
+      </cron>
+    </trigger>
+    <!--StudentExamJob测试 任务配置-->
+    <job>
+      <name>StudentExamJob</name>
+      <group>StudentExam</group>
+      <description>StudentExamJob测试</description>
+      <job-type>QuartzNetCourse.QuartzJobs.StudentExamJob,QuartzNetCourse</job-type>
+      <durable>true</durable>
+      <recover>false</recover>
+    </job>
+    <trigger>
+      <cron>
+        <name>StudentExamTrigger</name>
+        <group>StudentExam</group>
+        <job-name>StudentExamJob</job-name>
+        <job-group>StudentExam</job-group>
+        <start-time>2016-06-28T00:00:00+08:00</start-time>
+        <cron-expression>0 0/15 05-22 * * ?</cron-expression>
+      </cron>
+    </trigger>
+    <!--StudentTaskJob测试 任务配置-->
+    <job>
+      <name>StudentTaskJob</name>
+      <group>StudentTask</group>
+      <description>StudentTaskJob测试</description>
+      <job-type>QuartzNetCourse.QuartzJobs.StudentTaskJob,QuartzNetCourse</job-type>
+      <durable>true</durable>
+      <recover>false</recover>
+    </job>
+    <trigger>
+      <cron>
+        <name>StudentTaskTrigger</name>
+        <group>StudentTask</group>
+        <job-name>StudentTaskJob</job-name>
+        <job-group>StudentTask</job-group>
+        <start-time>2016-06-28T00:00:00+08:00</start-time>
+        <cron-expression>0 0/15 05-22 * * ?</cron-expression>
+      </cron>
+    </trigger>
+    <!--UnSubmitWorkJob测试 任务配置-->   <!--//hyd-->
+    <job>
+      <name>UnSubmitWorkJob</name>
+      <group>UnSubmitWork</group>
+      <description>UnSubmitWorkJob测试</description>
+      <job-type>QuartzNetCourse.QuartzJobs.UnSubmitWorkJob,QuartzNetCourse</job-type>
+      <durable>true</durable>
+      <recover>false</recover>
+    </job>
+    <trigger>
+      <cron>
+        <name>UnSubmitWorkTrigger</name>
+        <group>UnSubmitWork</group>
+        <job-name>UnSubmitWorkJob</job-name>
+        <job-group>UnSubmitWork</job-group>
+        <start-time>2016-08-03T00:00:00+08:00</start-time>
+        <cron-expression>0 0/15 05-22 * * ?</cron-expression>
+      </cron>
+    </trigger>
+    <!--AddUnSubmitWorkMessageJob测试 任务配置-->    <!--//hyd-->   
+    <job>
+      <name>AddUnSubmitWorkMessageJob</name>
+      <group>AddUnSubmitWorkMessage</group>
+      <description>AddUnSubmitWorkMessageJob测试</description>
+      <job-type>QuartzNetCourse.QuartzJobs.AddUnSubmitWorkMessageJob,QuartzNetCourse</job-type>
+      <durable>true</durable>
+      <recover>false</recover>
+    </job>
+    <trigger>
+      <cron>
+        <name>AddUnSubmitWorkMessageTrigger</name>
+        <group>AddUnSubmitWorkMessage</group>
+        <job-name>AddUnSubmitWorkMessageJob</job-name>
+        <job-group>AddUnSubmitWorkMessage</job-group>
+        <start-time>2016-08-03T00:00:00+08:00</start-time>
+        <cron-expression>0 1 0 * * ?</cron-expression>
+      </cron>
+    </trigger>
+    <!--EmailJob测试 任务配置-->
+    <job>
+      <name>EmailJob</name>
+      <group>Email</group>
+      <description>EmailJob测试</description>
+      <job-type>QuartzNetCourse.QuartzJobs.EmailJob,QuartzNetCourse</job-type>
+      <durable>true</durable>
+      <recover>false</recover>
+    </job>
+    <trigger>
+      <cron>
+        <name>EmailTrigger</name>
+        <group>Email</group>
+        <job-name>EmailJob</job-name>
+        <job-group>Email</job-group>
+        <start-time>2016-08-03T00:00:00+08:00</start-time>
+        <cron-expression>0 0/1 05-22 * * ?</cron-expression>
+      </cron>
+    </trigger>
+    <!--数据备份 任务配置-->
+    <job>
+      <name>TimingBackUpJob</name>
+      <group>BackUp</group>
+      <description>TimingBackUpJob测试</description>
+      <job-type>QuartzNetCourse.QuartzJobs.TimingBackUpJob,QuartzNetCourse</job-type>
+      <durable>true</durable>
+      <recover>false</recover>
+    </job>
+    <trigger>
+      <cron>
+        <name>TimingBackUpTrigger</name>
+        <group>BackUp</group>
+        <job-name>TimingBackUpJob</job-name>
+        <job-group>BackUp</job-group>
+        <start-time>2016-06-28T00:00:00+08:00</start-time>
+        <cron-expression>0 50 23 * * ?</cron-expression>
+      </cron>
+    </trigger>
+    
+    
+  </schedule>
+</job-scheduling-data>
